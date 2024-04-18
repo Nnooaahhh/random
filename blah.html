@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Answer Sharing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Real-Time Answer Sharing</h1>
+    <input type="text" id="answerInput" placeholder="Enter your answer">
+    <button onclick="submitAnswer()">Submit</button>
+
+    <h2>Answers</h2>
+    <div id="answersContainer"></div>
+
+    <script>
+        // Function to submit the answer
+        function submitAnswer() {
+            var answer = document.getElementById("answerInput").value;
+            // Send the answer to the server (not implemented here)
+            // For real-time updates, listen to updates from the server
+            // And update the UI accordingly
+            updateAnswers(answer);
+        }
+
+        // Function to update the UI with new answer
+        function updateAnswers(answer) {
+            var answersContainer = document.getElementById("answersContainer");
+            var answerElement = document.createElement("p");
+            answerElement.textContent = answer;
+            answersContainer.appendChild(answerElement);
+        }
+    </script>
+</body>
+</html>
